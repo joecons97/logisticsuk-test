@@ -1,0 +1,46 @@
+.driver-actity-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.driver-actity-row > * {
+    flex: 1;
+    text-align: center;
+}
+
+.minutes-container {
+    display: flex;
+}
+
+.minutes {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0px 4px;
+    text-align: center;
+}
+
+.activity-container {
+    display: flex;
+}
+
+.activity {
+    margin: 0px 4px;
+    text-align: center;
+}
+
+.day-active {
+    background-color: green;
+    outline: 1px black solid;
+    width: 48px;
+    height: 48px;
+}
+
+.day-inactive {
+    background-color: white;
+    outline: 1px black solid;
+    width: 48px;
+    height: 48px;
+}
