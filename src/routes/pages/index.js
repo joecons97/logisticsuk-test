@@ -6,6 +6,8 @@ const Index = () => {
         data:[],
         search: ""
     });
+
+    //Load driver data from json file
     const loadData = async () => {
         const resp = await fetch("/data/drivers.json");
         const data = await resp.json();

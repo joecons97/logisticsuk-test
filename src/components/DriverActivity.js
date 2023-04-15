@@ -9,6 +9,7 @@ const daysOfTheWeek = [
     "Sun"
 ]
 
+//Returns an array of actity type and activity duration
 function GetTotalActivityDuration(traces){
     let output = {
         "drive": {
@@ -25,6 +26,7 @@ function GetTotalActivityDuration(traces){
         },
     };
 
+    //Build up total activity by activity type
     traces.forEach((trace) => {
         trace.activity.forEach((activity) => {
             const existingMinutes = output[activity.type].minutes || 0;
@@ -35,9 +37,11 @@ function GetTotalActivityDuration(traces){
         });
     });
 
+    //Convert dictionary to array for use in jsx below
     return Object.values(output);
 }
 
+//Returns an array that stores all of the days of the week (represented as indices) that a driver's trace has stored
 function GetActiveDays(traces){
     let activeDays = [];
     traces.forEach((trace) => {
